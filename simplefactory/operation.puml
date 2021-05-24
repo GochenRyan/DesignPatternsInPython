@@ -1,0 +1,18 @@
+@startuml
+
+class CSimpleFactory {
+
+}
+
+class COperation {
+    m_iNumberA
+    m_iNumberB
+}
+
+CSimpleFactory <-- COperation
+COperation <|-- CAdd
+COperation <|-- CSub
+COperation <|-- CMul
+COperation <|-- CDiv
+
+@enduml

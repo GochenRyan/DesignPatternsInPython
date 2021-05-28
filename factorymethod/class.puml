@@ -1,0 +1,35 @@
+@startuml
+
+class CLeiFeng {
+    Sweep()
+    Wash()
+    BuyRice()
+}
+
+Interface IFactory {
+    CreateLeiFeng()
+}
+
+class CUndergraduateFactory {
+}
+
+class CUndergraduate {
+}
+
+class CVolunteerFactory {
+}
+
+class CVolunteer {
+}
+
+CLeiFeng <|-- CUndergraduate
+CLeiFeng <|-- CVolunteer
+
+IFactory <|.. CUndergraduateFactory
+IFactory <|.. CVolunteerFactory
+
+CLeiFeng <.. IFactory
+CUndergraduate <.. CUndergraduateFactory
+CVolunteer <.. CVolunteerFactory
+
+@enduml

@@ -1,0 +1,25 @@
+@startuml
+
+class CPerson {
+    m_sName
+}
+
+class CFinery {
+    m_oComponent
+    Decorate(oComponent)
+    Show()
+}
+
+class CTShirts {
+}
+
+class CBigTrouser{
+}
+
+CPerson <|-- CFinery
+CFinery <|-- CTShirts
+CFinery <|-- CBigTrouser
+CFinery o-- CFinery
+
+
+@enduml

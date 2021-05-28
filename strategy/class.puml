@@ -1,0 +1,29 @@
+@startuml
+
+class CCashBase {
+    AcceptCash(fCash)
+}
+
+class CCashReturn {
+    __init__(fCondition, fReturn):
+}
+
+class CCashNormal {
+
+}
+
+class CCashRebate {
+    __init__(fRebate)
+}
+
+class CContext {
+    __init__(sType)
+}
+
+CCashBase <|-- CCashNormal
+CCashBase <|-- CCashReturn
+CCashBase <|-- CCashRebate
+
+CContext <-- CCashBase
+
+@enduml

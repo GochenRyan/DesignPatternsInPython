@@ -1,0 +1,20 @@
+@startuml
+class CProxy {
+    m_oPursuit
+    GiveFlowers()
+}
+
+class CPursuit {
+    m_oGirl
+    SetGirl(oGirl)
+    GiveFlowers()
+}
+
+class CSchoolGirl {
+    m_sName
+}
+
+CProxy --> CPursuit
+CProxy ..> CSchoolGirl
+CPursuit -->CSchoolGirl
+@enduml

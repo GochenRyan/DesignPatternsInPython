@@ -1,0 +1,17 @@
+@startuml
+
+class CWorkExperience{
+    m_sDate
+    m_sCompany
+}
+
+class CResume{
+    m_sName
+    m_oWorkExperience
+    __copy__()
+    __deepcopy__(memodict)
+}
+
+CResume -> CWorkExperience
+
+@enduml

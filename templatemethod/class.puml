@@ -1,0 +1,22 @@
+@startuml
+
+class CAbstract{
+    primitiveOperation1()
+    primitiveOperation2()
+    TemplateMethod()
+}
+
+class CConcreteA{
+    primitiveOperation1()
+    primitiveOperation2()
+}
+
+class CConcreteB{
+    primitiveOperation1()
+    primitiveOperation2()
+}
+
+CAbstract <|-- CConcreteA
+CAbstract <|-- CConcreteB
+
+@enduml

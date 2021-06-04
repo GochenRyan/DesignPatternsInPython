@@ -1,0 +1,17 @@
+@startuml
+class CFacade{
+    m_oSystemOne
+    m_oSystemTwo
+    m_oSystemThree
+    m_oSystemFour
+
+    MethodA()
+    MethodB()
+}
+
+CFacade <-- CSubSystemOne
+CFacade <-- CSubSystemTwo
+CFacade <-- CSubSystemThree
+CFacade <-- CSubSystemFour
+
+@enduml

@@ -1,0 +1,26 @@
+
+@startuml
+class CDirector{
+	m_oBuilder
+	buildMinProduct()
+	buildMaxProduct()
+}
+
+class CProduct{
+}
+
+class CBuilder{
+	producePartA()
+	producePartB()
+	producePartC()
+}
+
+class CConcreteBuilder{
+	m_oProduct
+}
+
+CBuilder <|-- CConcreteBuilder
+CConcreteBuilder -> CProduct
+CDirector -> CBuilder
+
+@enduml
